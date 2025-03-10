@@ -1,0 +1,86 @@
+.footer {
+    display: flex;
+
+    background-color: #111;
+    color: #fff;
+    padding: 30px 0 15px;
+    width: 100%;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  /* Left section with links */
+  .linksSection {
+    display: flex;
+    gap: 50px;
+  }
+
+  .linkGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .linkGroup a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .linkGroup a:hover {
+    color: #ccc;
+  }
+
+  /* Center section with logo */
+  .logoSection {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    flex-direction: column;
+  }
+
+  .logo {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Right section with social media */
+  .socialSection {
+    font-size: 14px;
+  }
+
+  /* Copyright section */
+  .copyright {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .linksSection {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .linkGroup {
+      align-items: center;
+    }
+
+    .socialSection {
+      order: -1;
+    }
+  }
