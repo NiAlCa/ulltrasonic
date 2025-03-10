@@ -1,26 +1,48 @@
-import React from 'react';
+'use client'
+
+import React, { useState } from 'react';
+import styles from './contact.module.css';
+import dino from '../../../public/img/contact/dino.svg';
+import Image from 'next/image';
+import ContactPopup from './ContactPopup';
 
 const ContactPage: React.FC = () => {
-    return (
-        <div>
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const handleOpenPopup = () => {
+    setIsPopupOpen(true);
+  };
+
+  const handleClosePopup = () => {
+    setIsPopupOpen(false);
+  };
+
+  return (
+    <div className={styles.page}>
+      {!isPopupOpen && (
+        <div className={styles.container}>
+          <div className={styles.image}>
+            <Image
+              src={dino}
+              alt={'Dino'}
+              fill={true}
+              className={styles.imageContent}
+            />
+          </div>
+          <div className={styles.contact}>
             <h1>Contact Us</h1>
-            <form>
-                <div>
-                    <label htmlFor="name">Name:</label>
-                    <input type="text" id="name" name="name" required />
-                </div>
-                <div>
-                    <label htmlFor="email">Email:</label>
-                    <input type="email" id="email" name="email" required />
-                </div>
-                <div>
-                    <label htmlFor="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit">Submit</button>
-            </form>
+            <p>General Inquiries/Troubleshooting</p>
+            <button className={styles.helpButton} onClick={handleOpenPopup}>
+              How can we help you?
+            </button>
+          </div>
         </div>
-    );
+      )}
+      <ContactPopup isOpen={isPopupOpen} onClose={handleClosePopup} />
+    </div>
+  );
 };
 
 export default ContactPage;
+
+
