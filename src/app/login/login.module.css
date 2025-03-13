@@ -1,0 +1,68 @@
+.loginPage {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.title {
+    font-size: 2.5rem; /* Ajusta el tamaño de la fuente si es necesario */
+    margin-bottom: 1.5rem;
+    color: #ffffff; /* Asegúrate de que el color coincida con el esquema de colores */
+    font-family: 'Roboto', sans-serif; /* Usa la fuente principal del sitio */
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    background-color: #333333;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Ajusta la sombra para mayor coherencia */
+    border-radius: 10px; /* Ajusta el radio de borde si es necesario */
+}
+
+.formGroup {
+    margin-bottom: 1.5rem; /* Ajusta el margen inferior para mayor coherencia */
+}
+
+.label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #fff; /* Ajusta el color para mayor coherencia */
+    font-family: 'Roboto', sans-serif; /* Usa la fuente principal del sitio */
+}
+
+.input {
+    width: 100%;
+    padding: 0.75rem; /* Ajusta el padding para mayor coherencia */
+    border: 1px solid #ddd; /* Ajusta el color del borde para mayor coherencia */
+    border-radius: 5px; /* Ajusta el radio de borde si es necesario */
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif; /* Usa la fuente principal del sitio */
+}
+
+.buttonGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem; /* Añade margen superior para mayor coherencia */
+}
+
+.button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px; /* Ajusta el radio de borde si es necesario */
+    background-color: #333333;
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif; /* Usa la fuente principal del sitio */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #646363;
+}

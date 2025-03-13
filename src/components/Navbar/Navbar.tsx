@@ -2,6 +2,7 @@ import Link from 'next/link';
 import styles from './Navbar.module.css';
 import Image from 'next/image';
 import logo from '../../../public/img/branding/white-full-logo.svg';
+import login from '../../../public/img/login/login.svg';
 
 
 const Navbar: React.FC = () => {
@@ -17,8 +18,15 @@ const Navbar: React.FC = () => {
           />
         </Link>
         <ul className={styles.navLinks}>
-          <li><Link href="/FAQs" className={styles.navLink}>FAQs</Link></li>
-          <li><Link href="/contact" className={styles.navLink}>Contact</Link></li>
+          <li className={styles.navLink}><Link href="/FAQs" >FAQs</Link></li>
+          <li className={styles.navLink}><Link href="/contact">Contact</Link></li>
+          <li className={styles.navLink}><Link href="/login" >  <Image
+                      src={login}
+                      alt="Login icon svg"
+                      width={35}
+                      height={35}
+                      className='image'
+                    /></Link></li>
 
         </ul>
       </div>
